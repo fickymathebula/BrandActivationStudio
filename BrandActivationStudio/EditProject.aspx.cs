@@ -22,15 +22,14 @@ namespace BrandActivationStudio
 
             if(!IsPostBack)
             {
-
-                // Lets auto populate the input-boxes
-                int projectid = Convert.ToInt32(Request.QueryString["ProjectId"].ToString());
-                txtProjectId.Value = projectid.ToString();
-
                 using (SqlConnection con = new SqlConnection(strConnection))
                 {
                     try
                     {
+                        // Lets auto populate the input-boxes
+                        if (Request.QueryString["ProjectId"].ToString() != null)
+                        txtProjectId.Value = Request.QueryString["ProjectId"].ToString();
+
                         con.Open();
                         SqlCommand cmd = new SqlCommand("GetSelectedTProject", con);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -81,7 +80,8 @@ namespace BrandActivationStudio
                         cmd.ExecuteNonQuery();
                         con.Close();
 
-                        // Once we reach here the project is successfully created, redirect to project list
+                        // Once we reach here the project is successfully created, redirect to project list                        
+                        editmsgbox.InnerHtml = "<p class='alert alert-info'>Project updated successfully!</p>";
                         Response.Redirect("~/ProjectList");
                     }
                     catch (Exception ex)

@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="Add Project" Language="C#" AutoEventWireup="true" CodeBehind="AddProject.aspx.cs" Inherits="BrandActivationStudio.AddProject" %>
-
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
 <!DOCTYPE html>
@@ -7,6 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
     <script type="text/javascript">
 
         function ValidateAdd() {
@@ -37,9 +37,7 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <h2 style="text-align: center;">Add New Project</h2>
-        <br />
         <div id="addmsgbox" runat="server"></div>
-        <br />
         <div class="row">
             <div class="col-sm-4">
                 <label>Project Code:</label>
@@ -86,7 +84,7 @@
         </div>
         <br />
         <br />
-        <asp:Button ID="btnAddProject" runat="server" Text="Submit" OnClick="btnAddProject_Click" CssClass="btn btn-info" OnClientClick="ValidateAdd();"/>
+        <asp:Button ID="btnAddProject" runat="server" Text="Submit" OnClick="btnAddProject_Click" CssClass="btn btn-primary" OnClientClick="ValidateAdd();"/>
 
     </form>
 </body>

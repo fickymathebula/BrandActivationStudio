@@ -61,8 +61,7 @@ namespace BrandActivationStudio
                         cmd.ExecuteNonQuery();
                         con.Close();
 
-                        // Once we reach here the project is successfully created, redirect to project list
-                        Response.Redirect("~/ProjectList");
+                        addmsgbox.InnerHtml = "<p class='alert alert-info'>Project added successfully!</p>";
                     }
                     catch (Exception ex)
                     {

@@ -22,8 +22,13 @@ namespace BrandActivationStudio
 
             if (!IsPostBack)
             {
-                int projectid = Convert.ToInt32(Request.QueryString["ProjectId"].ToString());
-                txtProjectId.Value = projectid.ToString();
+                try
+                {
+                    if (Request.QueryString["ProjectId"].ToString() != null)
+                        txtProjectId.Value = Request.QueryString["ProjectId"].ToString();
+                } catch(Exception ex)
+                {
+                }                
             }
         }
 

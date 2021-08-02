@@ -53,18 +53,16 @@ namespace BrandActivationStudio
                                         "<td>" + startdate.ToString("dd-MM-yyyy") + "</td>" +
                                         "<td>" + enddate.ToString("dd-MM-yyyy") + "</td>" +
                                         "<td>" +
-                                        "<a href='EditProject?ProjectId=" + reader["ProjectId"] + "'>" +
+                                        "<a OnClick='OpenEditModal();' href='EditProject?ProjectId=" + reader["ProjectId"] + "'>" +
                                         "<span class='glyphicon glyphicon-pencil'></span> Edit</a> | " +
-                                        "<a href='DeleteProject?ProjectId=" + reader["ProjectId"] + "'>" +
+                                        "<a  OnClick='OpenDeleteModal();' href='DeleteProject?ProjectId=" + reader["ProjectId"] + "'>" +
                                         "<span class='glyphicon glyphicon-trash'></span> Delete</a>" +
                                         "</td>" +
                                         "</tr>";
-
                         }
 
                         tabledata += "</tbody></table>"; // Close dynamic table
                         divProjects.InnerHtml = tabledata;
-
                     }
                     catch (Exception)
                     {

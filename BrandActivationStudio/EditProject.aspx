@@ -1,13 +1,15 @@
 ﻿<%@ Page Title="Edit Project" Language="C#" AutoEventWireup="true" CodeBehind="EditProject.aspx.cs" Inherits="BrandActivationStudio.EditProject" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
-    <div style="text-align:center;">
+    <div class="row" style="text-align:center;">
         <form id="form1" runat="server">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <h2 style="text-align: center;">Edit Project</h2>
