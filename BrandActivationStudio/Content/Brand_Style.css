@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.Background {
+    background-color: grey;
+    opacity: 0.8;
+}
+
+.Popup {
+    background-color: #FFFFFF;
+    border-color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 450px;
+    height: 550px;
+}
+
+.lbl {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
